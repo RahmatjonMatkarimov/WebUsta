@@ -14,14 +14,6 @@
 
     <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 text-center">
 
-      <!-- Badge -->
-      <div class="reveal mb-6 sm:mb-8 flex justify-center">
-        <span class="section-label">
-          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></span>
-          O'zbekistondagi #1 IT Kompaniya
-        </span>
-      </div>
-
       <!-- Headline -->
       <h1 class="reveal reveal-delay-1 section-heading mb-5 sm:mb-6">
         Biznesingizni

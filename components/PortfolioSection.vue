@@ -16,8 +16,15 @@
 
       <!-- Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-        <article v-for="(project, i) in filteredProjects" :key="project.id"
-          :class="['card card-hover group overflow-hidden reveal', `reveal-delay-${(i % 3) + 1}`]">
+        <component
+          :is="project.url ? 'a' : 'article'"
+          v-for="(project, i) in filteredProjects"
+          :key="project.id"
+          :href="project.url || undefined"
+          :target="project.url ? '_blank' : undefined"
+          :rel="project.url ? 'noopener noreferrer' : undefined"
+          :class="['card card-hover group overflow-hidden reveal block no-underline text-inherit', `reveal-delay-${(i % 3) + 1}`, project.url ? 'cursor-pointer' : '']"
+        >
           <!-- Placeholder image area -->
           <div :class="['relative h-48 sm:h-52 overflow-hidden', project.bgClass]" role="img"
             :aria-label="project.title + ' loyihasi ko\'rinishi'">
@@ -114,7 +121,7 @@
               <p>{{ project.testimonial }}</p>
             </div>
           </div>
-        </article>
+        </component>
       </div>
 
       <div class="text-center mt-10 sm:mt-12 reveal">
