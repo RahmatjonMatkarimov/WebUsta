@@ -28,6 +28,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         // Proper mobile viewport — prevents zoom issues, ensures full width
+        { name: 'google-site-verification', content: '6To8TRIETXOe0059jPoL8dVUAkfQTf1hiSCwaru1gi8' },
         {
           name: 'viewport',
           content: 'width=device-width, initial-scale=1, viewport-fit=cover'
