@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://webusta.uz/sitemap.xml
+Sitemap: https://webusta.rahmatjonmatkarimov.uz/sitemap.xml

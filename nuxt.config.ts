@@ -8,6 +8,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
+  site: {
+    url: 'https://webusta.rahmatjonmatkarimov.uz',
+    name: 'WebUsta',
+    description: "WebUsta – O'zbekistonda web sayt yaratish, mobil ilova ishlab chiqish, Telegram bot yasash va CRM tizimlarini joriy etish bo'yicha IT kompaniya. Tez, sifatli va hamyonbop xizmat.",
+    defaultLocale: 'uz',
+  },
+
   colorMode: {
     classSuffix: '',
     preference: 'dark',
@@ -43,11 +50,11 @@ export default defineNuxtConfig({
 
         // Open Graph
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://webusta.uz' },
+        { property: 'og:url', content: 'https://webusta.rahmatjonmatkarimov.uz' },
         { property: 'og:site_name', content: 'WebUsta' },
         { property: 'og:title', content: "WebUsta – Professional IT Xizmatlari O'zbekistonda" },
         { property: 'og:description', content: "Biznesingizni internetga olib chiqamiz. Web sayt, mobil ilova, Telegram bot va CRM yechimlar. Bepul konsultatsiya." },
-        { property: 'og:image', content: 'https://webusta.uz/og-image.jpg' },
+        { property: 'og:image', content: 'https://webusta.rahmatjonmatkarimov.uz/og-image.jpg' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:locale', content: 'uz_UZ' },
@@ -56,10 +63,10 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'WebUsta – Professional IT Xizmatlari' },
         { name: 'twitter:description', content: "Web sayt, mobil ilova, Telegram bot va CRM yechimlar. Bepul konsultatsiya." },
-        { name: 'twitter:image', content: 'https://webusta.uz/og-image.jpg' },
+        { name: 'twitter:image', content: 'https://webusta.rahmatjonmatkarimov.uz/og-image.jpg' },
       ],
       link: [
-        { rel: 'canonical', href: 'https://webusta.uz' },
+        { rel: 'canonical', href: 'https://webusta.rahmatjonmatkarimov.uz' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -75,23 +82,27 @@ export default defineNuxtConfig({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "WebUsta",
-            "url": "https://webusta.uz",
-            "logo": "https://webusta.uz/favicon.svg",
-            "description": "O'zbekistonda web sayt yaratish, mobil ilova, Telegram bot va CRM tizimlari bo'yicha IT kompaniya.",
+            "url": "https://webusta.rahmatjonmatkarimov.uz",
+            "logo": "https://webusta.rahmatjonmatkarimov.uz/favicon.svg",
+            "image": "https://webusta.rahmatjonmatkarimov.uz/og-image.jpg",
+            "description": "O'zbekistonda web sayt yaratish, mobil ilova, Telegram bot va CRM tizimlari bo'yicha professional IT kompaniya.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Xorazm",
+              "addressRegion": "Xorazm",
               "addressCountry": "UZ"
             },
             "contactPoint": {
               "@type": "ContactPoint",
+              "telephone": "+998-91-999-98-83",
               "contactType": "customer service",
               "url": "https://t.me/rahmatjon_web",
-              "availableLanguage": ["Uzbek"]
+              "availableLanguage": ["Uzbek", "Russian", "English"]
             },
             "sameAs": [
               "https://t.me/rahmatjon_web",
-              "https://instagram.com/webusta"
+              "https://instagram.com/webusta",
+              "https://github.com/rahmatjon-web"
             ],
             "offers": {
               "@type": "AggregateOffer",

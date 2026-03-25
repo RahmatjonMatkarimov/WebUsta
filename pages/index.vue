@@ -63,6 +63,88 @@ onMounted(() => {
   })
 })
 
+// JSON-LD Structured Data
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web development, Mobile app development, Telegram bot development, CRM development",
+        "provider": {
+          "@type": "Organization",
+          "name": "WebUsta",
+          "url": "https://webusta.rahmatjonmatkarimov.uz"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Uzbekistan"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Web Sayt Yaratish"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobil Ilova Yaratish"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Telegram Bot Yaratish"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "CRM Tizimi"
+              }
+            }
+          ]
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Loyiha qancha vaqt oladi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Loyiha murakkabligiga qarab farqlanadi. Oddiy landing page 3-5 ish kuni, biznes sayt 2-3 hafta, mobil ilova 1-3 oy ichida tayyor bo'ladi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "To'lov qanday amalga oshiriladi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To'lov ikki bosqichda: loyiha boshida 50% oldindan to'lov, qolgan 50% tayyor bo'lgandan keyin."
+            }
+          }
+        ]
+      })
+    }
+  ]
+})
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'auto' })
 }
