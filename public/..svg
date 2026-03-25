@@ -1,0 +1,31 @@
+<svg width="250" height="60" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wrenchGradientDark" x1="10" y1="10" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Open Wrench / Spanner Icon -->
+  <path d="M10 27 Q 10 20, 15 20 L 35 20 Q 40 20, 40 25 L 40 25" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" />
+  <!-- Head -->
+  <path d="M40 25 C 40 5, 80 5, 80 25 C 80 45, 40 45, 40 25" fill="#38bdf8" />
+  <path d="M85 25 L 60 25 L 60 15 L 85 15 L 85 35 L 60 35 L 60 25" fill="black" /> <!-- Black for dark mode bg cutout -->
+  <!-- Note: SVG files in assets/public are served statically, so 'black' works if the background is actually dark -->
+  <!-- Wait, it's better to use transparent for the cutout if possible or just use lines for the code symbols -->
+  
+  <!-- Better: transparent code symbols on the colored head -->
+  <g transform="translate(0,0)">
+    <path d="M10 32 L 45 32" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" />
+    <path d="M45 32 C 45 5, 90 5, 90 32 C 90 60, 45 60, 45 32" fill="#38bdf8" />
+    <!-- The opening of the wrench -->
+    <path d="M92 32 L 65 32 L 65 22 L 92 22 L 92 42 L 65 42 L 65 32" fill="#0f172a" /> <!-- Very dark slate for dark bg -->
+    <!-- Code symbols inside the opening -->
+    <path d="M72 25 L 68 32 L 72 39" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M80 25 L 84 32 L 80 39" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M78 23 L 74 41" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Text: WebUsta -->
+  <text x="105" y="44" font-family="Clash Display, system-ui, sans-serif" font-weight="700" font-size="28" fill="#f8fafc">Web<tspan fill="#38bdf8">Usta</tspan></text>
+</svg>
