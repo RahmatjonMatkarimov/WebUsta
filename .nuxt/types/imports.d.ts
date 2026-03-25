@@ -24,6 +24,7 @@ declare global {
   const createReactiveFn: typeof import('@vueuse/core').createReactiveFn
   const createReusableTemplate: typeof import('@vueuse/core').createReusableTemplate
   const createSharedComposable: typeof import('@vueuse/core').createSharedComposable
+  const createSitePathResolver: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils').createSitePathResolver
   const createTemplatePromise: typeof import('@vueuse/core').createTemplatePromise
   const createUnrefFn: typeof import('@vueuse/core').createUnrefFn
   const customRef: typeof import('../../node_modules/vue').customRef
@@ -48,6 +49,7 @@ declare global {
   const getAppManifest: typeof import('../../node_modules/nuxt/dist/app/composables/manifest').getAppManifest
   const getCurrentInstance: typeof import('../../node_modules/vue').getCurrentInstance
   const getCurrentScope: typeof import('../../node_modules/vue').getCurrentScope
+  const getNitroOrigin: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/getNitroOrigin').getNitroOrigin
   const getRouteRules: typeof import('../../node_modules/nuxt/dist/app/composables/manifest').getRouteRules
   const h: typeof import('../../node_modules/vue').h
   const hasInjectionContext: typeof import('../../node_modules/vue').hasInjectionContext
@@ -150,6 +152,7 @@ declare global {
   const unrefElement: typeof import('@vueuse/core').unrefElement
   const until: typeof import('@vueuse/core').until
   const updateAppConfig: typeof import('../../node_modules/nuxt/dist/app/config').updateAppConfig
+  const updateSiteConfig: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/updateSiteConfig').updateSiteConfig
   const useActiveElement: typeof import('@vueuse/core').useActiveElement
   const useAnimate: typeof import('@vueuse/core').useAnimate
   const useAppConfig: typeof import('../../node_modules/nuxt/dist/app/config').useAppConfig
@@ -251,6 +254,7 @@ declare global {
   const useMutationObserver: typeof import('@vueuse/core').useMutationObserver
   const useNavigatorLanguage: typeof import('@vueuse/core').useNavigatorLanguage
   const useNetwork: typeof import('@vueuse/core').useNetwork
+  const useNitroOrigin: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/useNitroOrigin').useNitroOrigin
   const useNow: typeof import('@vueuse/core').useNow
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt').useNuxtApp
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').useNuxtData
@@ -328,6 +332,7 @@ declare global {
   const useSessionStorage: typeof import('@vueuse/core').useSessionStorage
   const useShadowRoot: typeof import('../../node_modules/vue').useShadowRoot
   const useShare: typeof import('@vueuse/core').useShare
+  const useSiteConfig: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/useSiteConfig').useSiteConfig
   const useSlots: typeof import('../../node_modules/vue').useSlots
   const useSorted: typeof import('@vueuse/core').useSorted
   const useSpeechRecognition: typeof import('@vueuse/core').useSpeechRecognition
@@ -392,6 +397,8 @@ declare global {
   const withMemo: typeof import('../../node_modules/vue').withMemo
   const withModifiers: typeof import('../../node_modules/vue').withModifiers
   const withScopeId: typeof import('../../node_modules/vue').withScopeId
+  const withSiteTrailingSlash: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils').withSiteTrailingSlash
+  const withSiteUrl: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils').withSiteUrl
 }
 // for type re-export
 declare global {
@@ -426,6 +433,7 @@ declare module 'vue' {
     readonly createReactiveFn: UnwrapRef<typeof import('@vueuse/core')['createReactiveFn']>
     readonly createReusableTemplate: UnwrapRef<typeof import('@vueuse/core')['createReusableTemplate']>
     readonly createSharedComposable: UnwrapRef<typeof import('@vueuse/core')['createSharedComposable']>
+    readonly createSitePathResolver: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils')['createSitePathResolver']>
     readonly createTemplatePromise: UnwrapRef<typeof import('@vueuse/core')['createTemplatePromise']>
     readonly createUnrefFn: UnwrapRef<typeof import('@vueuse/core')['createUnrefFn']>
     readonly customRef: UnwrapRef<typeof import('../../node_modules/vue')['customRef']>
@@ -450,6 +458,7 @@ declare module 'vue' {
     readonly getAppManifest: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/manifest')['getAppManifest']>
     readonly getCurrentInstance: UnwrapRef<typeof import('../../node_modules/vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('../../node_modules/vue')['getCurrentScope']>
+    readonly getNitroOrigin: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/getNitroOrigin')['getNitroOrigin']>
     readonly getRouteRules: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/manifest')['getRouteRules']>
     readonly h: UnwrapRef<typeof import('../../node_modules/vue')['h']>
     readonly hasInjectionContext: UnwrapRef<typeof import('../../node_modules/vue')['hasInjectionContext']>
@@ -552,6 +561,7 @@ declare module 'vue' {
     readonly unrefElement: UnwrapRef<typeof import('@vueuse/core')['unrefElement']>
     readonly until: UnwrapRef<typeof import('@vueuse/core')['until']>
     readonly updateAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['updateAppConfig']>
+    readonly updateSiteConfig: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/updateSiteConfig')['updateSiteConfig']>
     readonly useActiveElement: UnwrapRef<typeof import('@vueuse/core')['useActiveElement']>
     readonly useAnimate: UnwrapRef<typeof import('@vueuse/core')['useAnimate']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['useAppConfig']>
@@ -653,6 +663,7 @@ declare module 'vue' {
     readonly useMutationObserver: UnwrapRef<typeof import('@vueuse/core')['useMutationObserver']>
     readonly useNavigatorLanguage: UnwrapRef<typeof import('@vueuse/core')['useNavigatorLanguage']>
     readonly useNetwork: UnwrapRef<typeof import('@vueuse/core')['useNetwork']>
+    readonly useNitroOrigin: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/useNitroOrigin')['useNitroOrigin']>
     readonly useNow: UnwrapRef<typeof import('@vueuse/core')['useNow']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
@@ -730,6 +741,7 @@ declare module 'vue' {
     readonly useSessionStorage: UnwrapRef<typeof import('@vueuse/core')['useSessionStorage']>
     readonly useShadowRoot: UnwrapRef<typeof import('../../node_modules/vue')['useShadowRoot']>
     readonly useShare: UnwrapRef<typeof import('@vueuse/core')['useShare']>
+    readonly useSiteConfig: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/useSiteConfig')['useSiteConfig']>
     readonly useSlots: UnwrapRef<typeof import('../../node_modules/vue')['useSlots']>
     readonly useSorted: UnwrapRef<typeof import('@vueuse/core')['useSorted']>
     readonly useSpeechRecognition: UnwrapRef<typeof import('@vueuse/core')['useSpeechRecognition']>
@@ -794,5 +806,7 @@ declare module 'vue' {
     readonly withMemo: UnwrapRef<typeof import('../../node_modules/vue')['withMemo']>
     readonly withModifiers: UnwrapRef<typeof import('../../node_modules/vue')['withModifiers']>
     readonly withScopeId: UnwrapRef<typeof import('../../node_modules/vue')['withScopeId']>
+    readonly withSiteTrailingSlash: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils')['withSiteTrailingSlash']>
+    readonly withSiteUrl: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils')['withSiteUrl']>
   }
 }

@@ -6,12 +6,14 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
+    '@nuxtjs/sitemap',
+    'nuxt-site-config',
   ],
 
   site: {
     url: 'https://webusta.rahmatjonmatkarimov.uz',
-    name: 'WebUsta',
-    description: "WebUsta – O'zbekistonda web sayt yaratish, mobil ilova ishlab chiqish, Telegram bot yasash va CRM tizimlarini joriy etish bo'yicha IT kompaniya. Tez, sifatli va hamyonbop xizmat.",
+    name: 'WebUsta (Web Usta)',
+    description: "WebUsta (Web Usta) – O'zbekistonda web sayt yaratish, mobil ilova ishlab chiqish, Telegram bot yasash va CRM tizimlarini joriy etish bo'yicha IT kompaniya. Tez, sifatli va hamyonbop xizmat.",
     defaultLocale: 'uz',
   },
 
@@ -24,7 +26,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'uz' },
-      title: 'WebUsta – Web Sayt, Mobil Ilova va Telegram Bot Yaratish | O\'zbekiston',
+      title: 'WebUsta (Web Usta) – Web Sayt, Mobil Ilova va Telegram Bot Yaratish',
       meta: [
         { charset: 'utf-8' },
         // Proper mobile viewport — prevents zoom issues, ensures full width
@@ -35,11 +37,11 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: "WebUsta – O'zbekistonda web sayt yaratish, mobil ilova ishlab chiqish, Telegram bot yasash va CRM tizimlarini joriy etish bo'yicha IT kompaniya. Tez, sifatli va hamyonbop xizmat."
+          content: "WebUsta (Web Usta) – O'zbekistonda web sayt yaratish, mobil ilova, Telegram bot va CRM tizimlarini joriy etish bo'yicha professional IT kompaniya."
         },
         {
           name: 'keywords',
-          content: "web sayt yaratish, telegram bot yasash, mobil ilova yaratish, landing page, CRM tizimi, IT kompaniya Uzbekistan, sayt dizayn Toshkent, dastur yaratish, website Uzbekistan"
+          content: "web usta, webusta, web usta uz, web sayt yaratish, telegram bot yasash, mobil ilova yaratish, landing page, CRM tizimi, IT kompaniya Uzbekistan, sayt dizayn Toshkent, dastur yaratish, website Uzbekistan"
         },
         { name: 'author', content: 'WebUsta' },
         { name: 'robots', content: 'index, follow' },
@@ -83,6 +85,7 @@ export default defineNuxtConfig({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "WebUsta",
+            "alternateName": "Web Usta",
             "url": "https://webusta.rahmatjonmatkarimov.uz",
             "logo": "https://webusta.rahmatjonmatkarimov.uz/favicon.svg",
             "image": "https://webusta.rahmatjonmatkarimov.uz/og-image.jpg",

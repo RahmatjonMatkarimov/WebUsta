@@ -74,7 +74,7 @@ useHead({
         "serviceType": "Web development, Mobile app development, Telegram bot development, CRM development",
         "provider": {
           "@type": "Organization",
-          "name": "WebUsta",
+          "name": "WebUsta (Web Usta)",
           "url": "https://webusta.rahmatjonmatkarimov.uz"
         },
         "areaServed": {

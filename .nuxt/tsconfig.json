@@ -34,6 +34,9 @@
       "vite/client": [
         "../node_modules/vite/client"
       ],
+      "nuxt-site-config": [
+        "../node_modules/nuxt-site-config"
+      ],
       "nitropack/types": [
         "../node_modules/nitropack/types"
       ],
@@ -118,6 +121,18 @@
       "#color-mode-options": [
         "./color-mode-options.mjs"
       ],
+      "#sitemap": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime"
+      ],
+      "#sitemap/*": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime/*"
+      ],
+      "#site-config": [
+        "../node_modules/nuxt-site-config/dist/runtime"
+      ],
+      "#site-config/*": [
+        "../node_modules/nuxt-site-config/dist/runtime/*"
+      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -175,6 +190,8 @@
     "./nuxt.d.ts",
     "../node_modules/runtime",
     "../node_modules/dist/runtime",
+    "../node_modules/nuxt-site-config/dist/runtime",
+    "../node_modules/nuxt-site-config/dist/dist/runtime",
     ".."
   ],
   "exclude": [
@@ -182,6 +199,8 @@
     "../.data",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
+    "../node_modules/nuxt-site-config/dist/runtime/server",
+    "../node_modules/nuxt-site-config/dist/dist/runtime/server",
     "dev"
   ]
 }
