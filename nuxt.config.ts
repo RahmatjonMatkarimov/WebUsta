@@ -86,11 +86,11 @@ export default defineNuxtConfig({
             "contactPoint": {
               "@type": "ContactPoint",
               "contactType": "customer service",
-              "url": "https://t.me/webusta",
+              "url": "https://t.me/rahmatjon_web",
               "availableLanguage": ["Uzbek"]
             },
             "sameAs": [
-              "https://t.me/webusta",
+              "https://t.me/rahmatjon_web",
               "https://instagram.com/webusta"
             ],
             "offers": {

@@ -125,7 +125,7 @@
       </div>
 
       <div class="text-center mt-10 sm:mt-12">
-        <a href="https://t.me/webusta" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto">
+        <a :href="siteConfig.contact.telegram.url" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto">
           Barcha loyihalarni ko'rish
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -139,6 +139,8 @@
 </template>
 
 <script setup>
+import { siteConfig } from '~/utils/siteConfig'
+
 const projects = [
   {
     id: 1,

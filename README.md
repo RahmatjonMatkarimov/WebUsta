@@ -66,7 +66,7 @@ Mode: CSS variables for seamless dark/light switching
 
 ## 🔧 Customization
 
-1. **Telegram link**: Replace `https://t.me/webusta` with your handle
+1. **Telegram link**: Replace `https://t.me/rahmatjon_web` with your handle
 2. **Phone/Email**: Update in `ContactSection.vue`
 3. **Pricing**: Edit prices in `PricingSection.vue`
 4. **Portfolio**: Add real projects in `PortfolioSection.vue`
