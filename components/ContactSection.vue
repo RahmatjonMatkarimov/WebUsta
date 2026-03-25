@@ -11,7 +11,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-start">
 
         <!-- Left: CTA content -->
-        <div class="reveal">
+        <div>
           <span class="section-label mb-4 sm:mb-6 inline-block">Aloqa</span>
           <h2 id="contact-heading" class="section-heading mb-4 sm:mb-6">
             Loyihangizni
@@ -28,19 +28,19 @@
               :rel="contact.external ? 'noopener noreferrer' : undefined"
               class="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 card card-hover group">
               <div
-                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                 :class="contact.iconBg">
                 <span v-html="contact.icon" class="text-white" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="text-xs text-[var(--color-text-faint)] mb-0.5">{{ contact.label }}</div>
                 <div
-                  class="font-semibold text-sm sm:text-base text-[var(--color-text)] group-hover:text-brand-500 transition-colors duration-200 truncate">
+                  class="font-semibold text-sm sm:text-base text-[var(--color-text)] truncate">
                   {{ contact.value }}</div>
               </div>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round"
-                class="flex-shrink-0 text-[var(--color-text-faint)] group-hover:text-brand-500 group-hover:translate-x-1 transition-all duration-200"
+                class="flex-shrink-0 text-[var(--color-text-faint)]"
                 aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -50,13 +50,13 @@
 
           <!-- Working hours -->
           <div class="flex items-center gap-2 text-xs sm:text-sm text-[var(--color-text-muted)]">
-            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" aria-hidden="true"></span>
+            <span class="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" aria-hidden="true"></span>
             Ish vaqti: Dushanbadan-Shanbagacha, 9:00 – 22:00
           </div>
         </div>
 
         <!-- Right: Quick form -->
-        <div class="reveal reveal-delay-1">
+        <div>
           <div class="card p-5 sm:p-6 md:p-8">
             <h3 class="font-display font-semibold text-lg sm:text-xl text-[var(--color-text)] mb-5 sm:mb-6">Tez ariza
               qoldiring</h3>

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Header -->
-      <div class="text-center mb-10 sm:mb-14 reveal">
+      <div class="text-center mb-10 sm:mb-14">
         <span class="section-label mb-3 sm:mb-4 inline-block">Mijozlar fikri</span>
         <h2 id="testimonials-heading" class="section-heading mb-3 sm:mb-4">
           Ular nima
@@ -17,11 +17,10 @@
       <!-- Testimonials grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         <article
-          v-for="(review, i) in testimonials"
+          v-for="review in testimonials"
           :key="review.id"
           :class="[
-            'card card-hover p-5 sm:p-6 flex flex-col reveal',
-            `reveal-delay-${(i % 3) + 1}`,
+            'card card-hover p-5 sm:p-6 flex flex-col',
             review.featured ? 'sm:col-span-2 lg:col-span-1 bg-gradient-to-ob sm:bg-gradient-to-b from-brand-500/5 to-transparent border-brand-500/30' : ''
           ]"
         >

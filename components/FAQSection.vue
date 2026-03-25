@@ -3,7 +3,7 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Header -->
-      <div class="text-center mb-10 sm:mb-14 reveal">
+      <div class="text-center mb-10 sm:mb-14">
         <span class="section-label mb-3 sm:mb-4 inline-block">FAQ</span>
         <h2 id="faq-heading" class="section-heading mb-3 sm:mb-4">
           Ko'p so'raladigan
@@ -15,7 +15,7 @@
       </div>
 
       <!-- Accordion -->
-      <div class="space-y-2 sm:space-y-3 reveal reveal-delay-1">
+      <div class="space-y-2 sm:space-y-3">
         <div
           v-for="(item, i) in faqs"
           :key="item.id"
@@ -26,7 +26,7 @@
             :aria-expanded="open === item.id"
             :aria-controls="`faq-answer-${item.id}`"
             :id="`faq-question-${item.id}`"
-            class="w-full flex items-center justify-between gap-3 sm:gap-4 p-4 sm:p-5 text-left hover:bg-[var(--color-bg-muted)] transition-colors duration-200"
+            class="w-full flex items-center justify-between gap-3 sm:gap-4 p-4 sm:p-5 text-left hover:bg-[var(--color-bg-muted)]"
           >
             <span class="flex items-center gap-2.5 sm:gap-3">
               <span class="text-brand-500 font-display font-bold text-xs sm:text-sm flex-shrink-0">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -34,32 +34,30 @@
             </span>
             <svg
               width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              :class="['flex-shrink-0 transition-transform duration-300 text-[var(--color-text-muted)] w-4 h-4 sm:w-5 sm:h-5', open === item.id ? 'rotate-180' : '']"
+              :class="['flex-shrink-0 text-[var(--color-text-muted)] w-4 h-4 sm:w-5 sm:h-5', open === item.id ? 'rotate-180' : '']"
               aria-hidden="true"
             >
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </button>
 
-          <Transition name="faq">
-            <div
-              v-show="open === item.id"
-              :id="`faq-answer-${item.id}`"
-              :aria-labelledby="`faq-question-${item.id}`"
-              role="region"
-            >
-              <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-0">
-                <div class="pl-7 sm:pl-9 text-[var(--color-text-muted)] leading-relaxed text-xs sm:text-sm md:text-base border-t border-[var(--color-border)] pt-3 sm:pt-4">
-                  {{ item.answer }}
-                </div>
+          <div
+            v-show="open === item.id"
+            :id="`faq-answer-${item.id}`"
+            :aria-labelledby="`faq-question-${item.id}`"
+            role="region"
+          >
+            <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-0">
+              <div class="pl-7 sm:pl-9 text-[var(--color-text-muted)] leading-relaxed text-xs sm:text-sm md:text-base border-t border-[var(--color-border)] pt-3 sm:pt-4">
+                {{ item.answer }}
               </div>
             </div>
-          </Transition>
+          </div>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="text-center mt-10 sm:mt-12 reveal px-4">
+      <div class="text-center mt-10 sm:mt-12 px-4">
         <p class="text-[var(--color-text-muted)] text-sm sm:text-base mb-3 sm:mb-4">Savolingiz javobsiz qoldimi?</p>
         <a :href="siteConfig.social.telegram" target="_blank" rel="noopener noreferrer" class="btn-telegram w-full sm:w-auto justify-center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-4 h-4 sm:w-[18px] sm:h-[18px]">
@@ -126,19 +124,5 @@ const faqs = [
 </script>
 
 <style scoped>
-.faq-enter-active,
-.faq-leave-active {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-.faq-enter-from,
-.faq-leave-to {
-  opacity: 0;
-  max-height: 0;
-}
-.faq-enter-to,
-.faq-leave-from {
-  opacity: 1;
-  max-height: 500px; /* Accordion height fix for transitioning */
-}
+/* Animations removed for maximum speed */
 </style>

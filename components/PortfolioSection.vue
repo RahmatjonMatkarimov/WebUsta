@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Header -->
-      <div class="text-center mb-10 sm:mb-14 reveal">
+      <div class="text-center mb-10 sm:mb-14">
         <span class="section-label mb-3 sm:mb-4 inline-block">Portfolio</span>
         <h2 id="portfolio-heading" class="section-heading mb-3 sm:mb-4">
           Bizning
@@ -18,12 +18,12 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         <component
           :is="project.url ? 'a' : 'article'"
-          v-for="(project, i) in filteredProjects"
+          v-for="project in filteredProjects"
           :key="project.id"
           :href="project.url || undefined"
           :target="project.url ? '_blank' : undefined"
           :rel="project.url ? 'noopener noreferrer' : undefined"
-          :class="['card card-hover group overflow-hidden reveal block no-underline text-inherit', `reveal-delay-${(i % 3) + 1}`, project.url ? 'cursor-pointer' : '']"
+          :class="['card card-hover group overflow-hidden block no-underline text-inherit', project.url ? 'cursor-pointer' : '']"
         >
           <!-- Placeholder image area -->
           <div :class="['relative h-48 sm:h-52 overflow-hidden', project.bgClass]" role="img"
@@ -90,7 +90,7 @@
 
             <!-- Hover overlay - click to interact on mobile -->
             <div
-              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center">
               <span
                 class="text-white font-semibold text-xs sm:text-sm bg-white/20 backdrop-blur px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">Batafsil
                 ma'lumot</span>
@@ -101,7 +101,7 @@
           <div class="p-4 sm:p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
               <h3
-                class="font-display font-semibold text-base sm:text-lg text-[var(--color-text)] group-hover:text-brand-500 transition-colors duration-200">
+                class="font-display font-semibold text-base sm:text-lg text-[var(--color-text)]">
                 {{ project.title }}</h3>
               <span
                 class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-[var(--color-bg-muted)] text-[var(--color-text-faint)] whitespace-nowrap">{{
@@ -124,7 +124,7 @@
         </component>
       </div>
 
-      <div class="text-center mt-10 sm:mt-12 reveal">
+      <div class="text-center mt-10 sm:mt-12">
         <a href="https://t.me/webusta" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto">
           Barcha loyihalarni ko'rish
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Header -->
-      <div class="text-center mb-10 sm:mb-14 reveal">
+      <div class="text-center mb-10 sm:mb-14">
         <span class="section-label mb-3 sm:mb-4 inline-block">Xizmatlar</span>
         <h2 id="services-heading" class="section-heading mb-3 sm:mb-4">
           Sizga nima kerak?
@@ -16,18 +16,17 @@
       <!-- Services Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <article
-          v-for="(service, i) in services"
+          v-for="service in services"
           :key="service.title"
           :class="[
-            'card card-hover p-5 sm:p-6 md:p-8 group cursor-pointer reveal flex flex-col',
-            `reveal-delay-${i + 1}`,
+            'card card-hover p-5 sm:p-6 md:p-8 group cursor-pointer flex flex-col',
             service.featured ? 'bg-gradient-to-br from-brand-500/5 to-accent-500/5 border-brand-500/20 shadow-brand/10' : ''
           ]"
         >
           <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 flex-1">
             <!-- Icon -->
             <div :class="[
-              'flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110',
+              'flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center',
               service.featured
                 ? 'bg-gradient-to-br from-brand-500 to-accent-500 shadow-brand text-white'
                 : 'bg-[var(--color-bg-muted)] text-brand-500 group-hover:bg-gradient-to-br group-hover:from-brand-500/20 group-hover:to-accent-500/20'

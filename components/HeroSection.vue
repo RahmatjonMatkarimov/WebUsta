@@ -9,13 +9,13 @@
     <div class="absolute inset-0 bg-gradient-mesh dark:bg-gradient-mesh-dark" aria-hidden="true" />
 
     <!-- Floating orbs — hidden on small screens to avoid layout issues -->
-    <div class="absolute top-1/4 -left-16 w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-brand-500/10 blur-3xl animate-pulse-slow pointer-events-none" aria-hidden="true" />
-    <div class="absolute bottom-1/4 -right-16 w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-accent-500/10 blur-3xl animate-pulse-slow pointer-events-none" style="animation-delay: 2s" aria-hidden="true" />
+    <div class="absolute top-1/4 -left-16 w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-brand-500/10 blur-3xl pointer-events-none" aria-hidden="true" />
+    <div class="absolute bottom-1/4 -right-16 w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-accent-500/10 blur-3xl pointer-events-none" aria-hidden="true" />
 
     <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 text-center">
 
       <!-- Headline -->
-      <h1 class="reveal reveal-delay-1 section-heading mb-5 sm:mb-6">
+      <h1 class="section-heading mb-5 sm:mb-6">
         Biznesingizni
         <span class="gradient-text"> internetga</span>
         <br class="hidden sm:block" />
@@ -23,13 +23,13 @@
       </h1>
 
       <!-- Subheadline -->
-      <p class="reveal reveal-delay-2 section-sub mb-8 sm:mb-10 mx-auto px-2">
+      <p class="section-sub mb-8 sm:mb-10 mx-auto px-2">
         Web sayt, mobil ilova, Telegram bot va CRM tizimlari — barchasi bir joyda.
         <strong class="text-[var(--color-text)] font-medium">Tez, sifatli va ishonchli xizmat.</strong>
       </p>
 
       <!-- CTA Buttons -->
-      <div class="reveal reveal-delay-3 flex flex-col xs:flex-row sm:flex-row gap-3 justify-center mb-12 sm:mb-16 px-4 sm:px-0">
+      <div class="flex flex-col xs:flex-row sm:flex-row gap-3 justify-center mb-12 sm:mb-16 px-4 sm:px-0">
         <a href="#contact" class="btn-primary text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 justify-center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -45,11 +45,11 @@
       </div>
 
       <!-- Stats -->
-      <div class="reveal reveal-delay-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
         <div
           v-for="stat in stats"
           :key="stat.label"
-          class="card p-3 sm:p-4 text-center group hover:border-brand-400/40 transition-all duration-300"
+          class="card p-3 sm:p-4 text-center group hover:border-brand-400/40"
         >
           <div class="text-xl sm:text-2xl md:text-3xl font-display font-bold gradient-text mb-0.5 sm:mb-1">{{ stat.value }}</div>
           <div class="text-xs sm:text-sm text-[var(--color-text-muted)] leading-tight">{{ stat.label }}</div>

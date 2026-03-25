@@ -9,12 +9,12 @@
 
         <!-- Left: Content -->
         <div>
-          <span class="section-label mb-4 sm:mb-6 inline-block reveal">Nega biz?</span>
-          <h2 id="why-heading" class="section-heading mb-4 sm:mb-6 reveal reveal-delay-1">
+          <span class="section-label mb-4 sm:mb-6 inline-block">Nega biz?</span>
+          <h2 id="why-heading" class="section-heading mb-4 sm:mb-6">
             Biz faqat kod
             <span class="gradient-text"> yozmaymiz</span>
           </h2>
-          <p class="text-[var(--color-text-muted)] text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 reveal reveal-delay-2">
+          <p class="text-[var(--color-text-muted)] text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
             Biz sizning biznesingizning <strong class="text-[var(--color-text)] font-medium">raqamli hamkorlarimiz.</strong>
             Maqsadingizni tushunib, texnologiya orqali real natijaga erishishga yordam beramiz.
           </p>
@@ -22,11 +22,11 @@
           <!-- Reasons list -->
           <div class="space-y-4 sm:space-y-5">
             <div
-              v-for="(reason, i) in reasons"
+              v-for="reason in reasons"
               :key="reason.title"
-              :class="['flex items-start gap-3 sm:gap-4 group reveal', `reveal-delay-${i + 2}`]"
+              class="flex items-start gap-3 sm:gap-4 group"
             >
-              <div class="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] flex items-center justify-center text-brand-500 group-hover:border-brand-400/40 group-hover:shadow-brand transition-all duration-300">
+              <div class="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] flex items-center justify-center text-brand-500 group-hover:border-brand-400/40 group-hover:shadow-brand">
                 <span v-html="reason.icon" />
               </div>
               <div>
@@ -38,12 +38,12 @@
         </div>
 
         <!-- Right: Visual card grid -->
-        <div class="grid grid-cols-2 gap-3 sm:gap-4 reveal reveal-delay-1">
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
           <div
             v-for="(metric, i) in metrics"
             :key="metric.label"
             :class="[
-              'card p-4 sm:p-5 text-center group hover:border-brand-400/40 hover:shadow-brand hover:-translate-y-1 transition-all duration-300',
+              'card p-4 sm:p-5 text-center group hover:border-brand-400/40',
               i === 0 ? 'col-span-2 bg-gradient-to-r from-brand-500/5 to-accent-500/5 border-brand-500/20' : ''
             ]"
           >

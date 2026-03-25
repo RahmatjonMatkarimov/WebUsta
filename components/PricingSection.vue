@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Header -->
-      <div class="text-center mb-10 sm:mb-14 reveal">
+      <div class="text-center mb-10 sm:mb-14">
         <span class="section-label mb-3 sm:mb-4 inline-block">Narxlar</span>
         <h2 id="pricing-heading" class="section-heading mb-3 sm:mb-4">
           Har bir byudjet uchun
@@ -16,14 +16,14 @@
       </div>
 
       <!-- Service Type Tabs — horizontally scrollable on mobile -->
-      <div class="relative mb-8 sm:mb-12 reveal">
+      <div class="relative mb-8 sm:mb-12">
         <div class="flex gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap sm:justify-center scrollbar-hide">
           <button
             v-for="tab in pricingTabs"
             :key="tab.id"
             @click="activeTab = tab.id"
             :class="[
-              'flex-shrink-0 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 flex items-center gap-1.5',
+              'flex-shrink-0 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-1.5',
               activeTab === tab.id
                 ? 'bg-brand-500 text-white shadow-brand'
                 : 'bg-[var(--color-bg-card)] text-[var(--color-text-muted)] border border-[var(--color-border)] hover:border-brand-400 hover:text-brand-500'
@@ -38,14 +38,13 @@
       <!-- Pricing Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
         <article
-          v-for="(plan, i) in currentPlans"
+          v-for="plan in currentPlans"
           :key="plan.name"
           :class="[
-            'card relative flex flex-col reveal',
-            `reveal-delay-${i + 1}`,
+            'card relative flex flex-col',
             plan.popular
               ? 'border-brand-500/40 shadow-brand lg:scale-[1.02] bg-gradient-to-b from-brand-500/5 to-transparent'
-              : 'hover:border-brand-400/40 hover:shadow-card'
+              : 'hover:border-brand-400/40'
           ]"
         >
           <!-- Popular badge -->
@@ -130,7 +129,7 @@
       </div>
 
       <!-- Note -->
-      <p class="text-center text-xs sm:text-sm text-[var(--color-text-faint)] mt-6 sm:mt-8 reveal px-4">
+      <p class="text-center text-xs sm:text-sm text-[var(--color-text-faint)] mt-6 sm:mt-8 px-4">
         💡 Aniq narx loyiha talablariga ko'ra belgilanadi.
         <a :href="siteConfig.social.telegram" class="text-brand-500 hover:underline" target="_blank" rel="noopener noreferrer">Bepul konsultatsiya</a>
         uchun bog'laning.
