@@ -82,7 +82,7 @@ const reasons = [
 ]
 
 const metrics = [
-  { value: '150+', label: 'Bajarilgan loyiha', desc: 'O\'zbekiston va xorijda' },
+  { value: '30+', label: 'Bajarilgan loyiha', desc: 'O\'zbekiston va xorijda' },
   { value: '3 yil', label: 'Bozordagi tajriba' },
   { value: '98%', label: 'Mijoz mamnunligi' },
   { value: '2×', label: 'O\'rtacha ROI' },

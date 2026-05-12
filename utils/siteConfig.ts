@@ -4,7 +4,7 @@ export const siteConfig = {
       display: '+998 91 999 98 83',
       raw: '+998919999883',
     },
-    email: 'rahmatjon973@gmail.com',
+    email: 'rahmatjon974@gmail.com',
     telegram: {
       username: 'rahmatjon_web',
       url: 'https://t.me/rahmatjon_web',
@@ -14,7 +14,7 @@ export const siteConfig = {
 
   social: {
     telegram: 'https://t.me/rahmatjon_web',
-    instagram: 'https://instagram.com/rahmatjon_web',
+    instagram: 'https://instagram.com/rahmatjon.web',
     linkedin: null,
   },
 

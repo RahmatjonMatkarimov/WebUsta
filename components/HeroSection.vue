@@ -70,7 +70,7 @@
 import { siteConfig } from '~/utils/siteConfig'
 
 const stats = [
-  { value: '150+', label: 'Bajarilgan loyiha' },
+  { value: '30+', label: 'Bajarilgan loyiha' },
   { value: '3 yil', label: 'Tajriba' },
   { value: '98%', label: 'Mijoz mamnunligi' },
   { value: '24/7', label: "Qo'llab-quvvatlash" },
