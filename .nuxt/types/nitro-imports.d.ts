@@ -133,6 +133,7 @@ declare global {
   const useNitroOrigin: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/useNitroOrigin').useNitroOrigin
   const useRuntimeConfig: typeof import('../../node_modules/nitropack/dist/runtime/internal/config').useRuntimeConfig
   const useSession: typeof import('../../node_modules/h3').useSession
+  const useSiteConfig: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/useSiteConfig').useSiteConfig
   const useStorage: typeof import('../../node_modules/nitropack/dist/runtime/internal/storage').useStorage
   const withSiteTrailingSlash: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/utils').withSiteTrailingSlash
   const withSiteUrl: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/utils').withSiteUrl
@@ -156,14 +157,15 @@ export { getRouteRules } from 'nitropack/runtime/internal/route-rules';
 export { useEvent } from 'nitropack/runtime/internal/context';
 export { defineTask, runTask } from 'nitropack/runtime/internal/task';
 export { defineNitroErrorHandler } from 'nitropack/runtime/internal/error/utils';
-export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '/Users/rahmatjon/Downloads/webusta/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths';
-export { defineAppConfig } from '/Users/rahmatjon/Downloads/webusta/node_modules/@nuxt/nitro-server/dist/runtime/utils/config';
-export { defineSitemapEventHandler } from '/Users/rahmatjon/Downloads/webusta/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/defineSitemapEventHandler';
-export { asSitemapUrl } from '/Users/rahmatjon/Downloads/webusta/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/asSitemapUrl';
-export { getPathRobotConfig } from '/Users/rahmatjon/Downloads/webusta/node_modules/@nuxtjs/sitemap/dist/runtime/server/robots-polyfill/getPathRobotConfig';
-export { getNitroOrigin } from '/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/runtime/server/composables/getNitroOrigin';
-export { getSiteConfig } from '/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteConfig';
-export { getSiteIndexable } from '/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable';
-export { updateSiteConfig } from '/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/runtime/server/composables/updateSiteConfig';
-export { useNitroOrigin } from '/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/runtime/server/composables/useNitroOrigin';
-export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/runtime/server/composables/utils';
+export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths';
+export { defineAppConfig } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/@nuxt/nitro-server/dist/runtime/utils/config';
+export { defineSitemapEventHandler } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/defineSitemapEventHandler';
+export { asSitemapUrl } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/asSitemapUrl';
+export { getPathRobotConfig } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/@nuxtjs/sitemap/dist/runtime/server/robots-polyfill/getPathRobotConfig';
+export { getNitroOrigin } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/getNitroOrigin';
+export { getSiteConfig } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteConfig';
+export { getSiteIndexable } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable';
+export { updateSiteConfig } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/updateSiteConfig';
+export { useNitroOrigin } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/useNitroOrigin';
+export { useSiteConfig } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/useSiteConfig';
+export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/runtime/server/composables/utils';

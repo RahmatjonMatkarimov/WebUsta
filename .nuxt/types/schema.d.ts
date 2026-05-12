@@ -16,61 +16,9 @@ import { NuxtModule, ModuleDependencyMeta } from '@nuxt/schema'
    },
 
    sitemap: {
-      isI18nMapped: boolean,
-
-      sitemapName: string,
-
-      isMultiSitemap: boolean,
-
-      excludeAppSources: Array<any>,
-
       cacheMaxAgeSeconds: number,
 
-      autoLastmod: boolean,
-
-      defaultSitemapsChunkSize: number,
-
-      minify: boolean,
-
-      sortEntries: boolean,
-
       debug: boolean,
-
-      discoverImages: boolean,
-
-      discoverVideos: boolean,
-
-      sitemapsPathPrefix: string,
-
-      isNuxtContentDocumentDriven: boolean,
-
-      xsl: string,
-
-      xslTips: boolean,
-
-      xslColumns: Array<{
-
-      }>,
-
-      credits: boolean,
-
-      version: string,
-
-      sitemaps: {
-         "sitemap.xml": {
-            sitemapName: string,
-
-            route: string,
-
-            defaults: any,
-
-            include: Array<any>,
-
-            exclude: Array<string>,
-
-            includeAppSources: boolean,
-         },
-      },
    },
 
    "nuxt-site-config": {
@@ -157,7 +105,7 @@ declare module '@nuxt/schema' {
      * Configuration for `@nuxt/telemetry`
      */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O, unknown, boolean> ? Partial<O> | false : Record<string, any> | false
-    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/color-mode", Exclude<NuxtConfig["colorMode"], boolean>] | ["@vueuse/nuxt", Exclude<NuxtConfig["vueuse"], boolean>] | ["/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/module.mjs", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["nuxt-site-config", Exclude<NuxtConfig["site"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/color-mode", Exclude<NuxtConfig["colorMode"], boolean>] | ["@vueuse/nuxt", Exclude<NuxtConfig["vueuse"], boolean>] | ["/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/module.mjs", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["nuxt-site-config", Exclude<NuxtConfig["site"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig extends UserRuntimeConfig {}
   interface PublicRuntimeConfig extends UserPublicRuntimeConfig {}
@@ -243,7 +191,7 @@ declare module 'nuxt/schema' {
      * @see https://www.npmjs.com/package/@nuxt/telemetry
      */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O, unknown, boolean> ? Partial<O> | false : Record<string, any> | false
-    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/color-mode", Exclude<NuxtConfig["colorMode"], boolean>] | ["@vueuse/nuxt", Exclude<NuxtConfig["vueuse"], boolean>] | ["/Users/rahmatjon/Downloads/webusta/node_modules/nuxt-site-config/dist/module.mjs", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["nuxt-site-config", Exclude<NuxtConfig["site"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/color-mode", Exclude<NuxtConfig["colorMode"], boolean>] | ["@vueuse/nuxt", Exclude<NuxtConfig["vueuse"], boolean>] | ["/Users/rahmatjon974/Desktop/WebUsta/node_modules/nuxt-site-config/dist/module.mjs", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["nuxt-site-config", Exclude<NuxtConfig["site"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig extends SharedRuntimeConfig {}
   interface PublicRuntimeConfig extends SharedPublicRuntimeConfig {}
